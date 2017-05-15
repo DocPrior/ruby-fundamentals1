@@ -1,7 +1,7 @@
 distance = 0
 energy = 10
 
-puts "walk, run, or go home?"
+puts "walk, run, rest, eat, or go home?"
   answer = gets.chomp
 
 while answer != "go home"
@@ -15,10 +15,14 @@ while answer != "go home"
         puts "Distance from home #{distance += 5}km."
         puts "Energy is at #{energy -= 2}"
       end
+  elsif answer == "eat"
+    puts "Energy is now #{energy += 5}."
+  elsif answer == "rest"
+    puts "Energy is now #{energy += 10}."
   else
     puts "bad command"
   end
 
-  puts "walk, run, or go home?"
+  puts "walk, run, rest, eat or go home?"
     answer = gets.chomp
 end
