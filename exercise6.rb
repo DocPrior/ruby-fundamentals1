@@ -3,11 +3,13 @@ distance = 0
 puts "walk, run, or go home?"
   answer = gets.chomp
 
-while true
+while answer != "go home"
   if answer == "walk"
-      puts "Distance from home #{distance + 1}km."
+      puts "Distance from home #{distance += 1}km."
+  elsif answer == "run"
+      puts "Distance from home #{distance += 5}km."
   else
-      puts "Distance from home #{distance + 5}km."
+    puts "bad command"
   end
 
   puts "walk, run, or go home?"
