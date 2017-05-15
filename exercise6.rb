@@ -1,14 +1,15 @@
-puts "walk, run, or go home?"
-answer = gets
+
 distance = 0
 
-unless answer == "go home"
+puts "walk, run, or go home?"
+  answer = gets.to_s
 
-  if answer == "walk"
-    puts "Distance from home #{distance + 1}km."
-  elsif answer == "run"
-    puts "Distance from home #{distance +5}km."
-  else
-    puts "Invalid Command!"
-  end
+unless answer == "go home"
+    if answer == "walk"
+      puts "Distance from home #{distance + 1}km."
+    else
+      puts "Distance from home #{distance +5}km."
+    end
+    puts "walk, run, or go home?"
+      answer = gets.to_s
 end
